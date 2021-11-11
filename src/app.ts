@@ -16,5 +16,17 @@ var formatter = new Intl.NumberFormat("en-US", {
   //maximumFractionDigits: 0, // (causes 2500.99 to be printed as $2,501)
 });
 
-const sum = formatter.format(2500); /* $2,500.00 */
-console.log(sum);
+const sum = formatter.format(2500).split("UZS")[1]; /* $2,500.00 */
+
+let list: number[] = [1, 2, 3];
+let newList: Array<any> = [1, "a"];
+let door: any = false;
+
+enum directions {
+  up,
+  down,
+  left,
+  right,
+}
+
+console.log(directions.left);
