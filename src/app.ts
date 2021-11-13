@@ -29,12 +29,9 @@ const fefe: stum = 3
 console.log(fefe);
 
 
-const createPassword = (name: string, password?: string | number) => `${name}${password}`
-const sayHello = (name: any): void => {
-  console.log(`say hello ${name}`);
-};
 
-sayHello("leo");
+
+
 
 // Create our number formatter.
 var formatter = new Intl.NumberFormat("en-US", {
@@ -60,3 +57,12 @@ enum directions {
 }
 
 console.log(directions.left);
+
+
+
+const sayHello = (name: any): void => {
+  console.log(`say hello ${name}`);
+};
+
+
+const createPassword = (name: string, password?: string | number): string => `${name}${password}`
