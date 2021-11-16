@@ -68,49 +68,63 @@ const sayHello = (name: any): void => {
 const createPassword = (name: string, password?: string | number): string => `${name}${password}`
 
 type Person = {
-  name:string,
-  age:number,
-  nickName?:string,
-  getPassword?:()=>string
+  name: string,
+  age: number,
+  nickName?: string,
+  getPassword?: () => string
 }
 
 let user: Person = {
-  name:"leo",
-  age:24
+  name: "leo",
+  age: 24
 }
 
- console.log(user);
- 
+console.log(user);
 
- class User {
-   name: string;
-   age:number;
-   nickName:string;
 
-   constructor( name:string, age:number, nickName:string ) {
-      this.name = name
-      this.age = age,
+class User {
+  name: string;
+  age: number;
+  nickName: string;
+
+  constructor(name: string, age: number, nickName: string) {
+    this.name = name
+    this.age = age,
       this.nickName = nickName
-   }
+  }
 
-   setAge(age:number) {
+  setAge(age: number) {
     this.age = age
-   }
+  }
 
-   set myAge (age: number) {
-     this.age = age
-   }
- 
- }
+  set myAge(age: number) {
+    this.age = age
+  }
 
- class Member {
-   static firstName:string = "Joe";
+}
 
-   sayHi() {
-     console.log(Member.firstName)
-   }
- }
+class Member {
+  static firstName: string = "Joe";
 
- const Joe = new Member()
+  sayHi() {
+    console.log(Member.firstName)
+  }
+}
 
- Joe.sayHi()
+const Joe = new Member()
+
+Joe.sayHi()
+
+interface Car {
+  name: string,
+  cycle: number,
+  [propName: string]: any
+}
+
+type CarTwo = {
+  name: string,
+  age: number,
+  [propName: string]: any
+}
+
+const getter = <T>(data: T): T => data
