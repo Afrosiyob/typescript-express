@@ -100,7 +100,7 @@ let user: Person = {
    set myAge (age: number) {
      this.age = age
    }
-
+ 
  }
 
  class Member {
