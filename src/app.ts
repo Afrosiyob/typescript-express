@@ -128,3 +128,6 @@ type CarTwo = {
 }
 
 const getter = <T>(data: T): T => data
+
+console.log(getter(45).length);
+console.log(getter("45").length);
